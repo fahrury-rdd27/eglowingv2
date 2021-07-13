@@ -13,7 +13,7 @@ SECRET_KEY = 'django-insecure-ai&z+*-5ova-znw0u=^16jwo0v)40$!na*plmn+_p)#jx+%#oj
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['*', '127.0.0.1', 'localhost', 'eglowingv2.herokuapp.com', 'www.eglowingv2.herokuapp.com']
 
 
 # Application definition
@@ -75,9 +75,13 @@ DATABASES = {
         'PASSWORD': 'lagunahwan27',
         'HOST': '127.0.0.1',
         'PORT': '5432',
+        'CONN_MAX_AGE': 500
     }
 }
-
+# Update database configuration with $DATABASE_URL.
+import dj_database_url
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
