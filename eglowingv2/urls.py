@@ -8,7 +8,7 @@ from drf_yasg import openapi
 schema_view = get_schema_view(
     openapi.Info(
         title = "e-Glowing API",
-        default_version = "v1",
+        default_version = "alpha",
         description = "API for e-Glowing Consultation Apps",
         term_of_service = "https://www.google.com/policies/terms/",
         contact = openapi.Contact(email="fahrury_rdd27@eglowing.com"),
@@ -22,6 +22,7 @@ schema_view = get_schema_view(
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('produk.urls')),
+    path('profile/', include('userprofile.urls')),
     path('account/', include('account.urls')),
     path('swagger/', schema_view.with_ui(
         'swagger', cache_timeout=0), name='schema-swagger-ui'),

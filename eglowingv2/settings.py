@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     # local
     'produk',
     'account',
+    'userprofile',
 
     # 3rd party
     'rest_framework',
@@ -129,14 +130,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-STATIC_ROOT  =   os.path.join(PROJECT_ROOT, 'staticfiles')
+STATIC_ROOT  = os.path.join(PROJECT_ROOT, 'staticfiles')
+MEDIA_ROOT  = os.path.join(PROJECT_ROOT, 'media')
+MEDIA_URL = '/media/'
 STATIC_URL = '/static/'
 
-# Extra places for collectstatic to find static files.
-# STATICFILES_DIRS = (
-#     os.path.join(BASE_DIR, 'static'),
-# )
 
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
