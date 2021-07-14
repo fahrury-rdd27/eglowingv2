@@ -17,6 +17,12 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*', '127.0.0.1', 'localhost', 'eglowingv2.herokuapp.com', 'www.eglowingv2.herokuapp.com']
 
+# rest framework authentication classes
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ],
+}
 
 # Application definition
 
@@ -30,6 +36,7 @@ INSTALLED_APPS = [
 
     # local
     'produk',
+    'account',
 
     # 3rd party
     'rest_framework',
