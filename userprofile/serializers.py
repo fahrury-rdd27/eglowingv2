@@ -4,11 +4,11 @@ from .models import ConsultantProfile, PatientProfile
 class ConsultantProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = ConsultantProfile
-        fields = ['username', 'first_name', 'last_name', 'alamat_domisili',
-        'tanggal_lahir', 'no_rekening', 'pengalaman_praktek']
+        fields = ['id', 'first_name', 'last_name', 'alamat_domisili',
+        'tanggal_lahir', 'no_rekening', 'pengalaman_praktek', 'izin_praktek', 'ktp']
 
 class PatientProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = PatientProfile
-        fields = ['username', 'first_name', 'last_name', 'alamat_domisili',
+        fields = ['id', 'first_name', 'last_name', 'alamat_domisili',
         'tanggal_lahir', 'jenis_kulit']

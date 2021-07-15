@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'cloudinary_storage',
     'django.contrib.staticfiles',
 
     # local
@@ -42,6 +43,7 @@ INSTALLED_APPS = [
     # 3rd party
     'rest_framework',
     'drf_yasg',
+    'cloudinary',
 ]
 
 MIDDLEWARE = [
@@ -147,3 +149,12 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Cloudinary setting
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'e-glowing',
+    'API_KEY': '892893865579588',
+    'API_SECRET': 'JbEUertHLYYkqD6LauD2nmlE9fo',
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
