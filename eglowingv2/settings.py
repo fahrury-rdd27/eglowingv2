@@ -136,7 +136,6 @@ USE_TZ = True
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATIC_ROOT  = os.path.join(PROJECT_ROOT, 'staticfiles')
 MEDIA_ROOT  = os.path.join(PROJECT_ROOT, 'media')
-
 MEDIA_URL = '/media/'
 STATIC_URL = '/static/'
 
@@ -151,11 +150,11 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# # Cloudinary setting
-# CLOUDINARY_STORAGE = {
-#     'CLOUD_NAME': 'e-glowing',
-#     'API_KEY': '892893865579588',
-#     'API_SECRET': 'JbEUertHLYYkqD6LauD2nmlE9fo',
-# }
+# Cloudinary setting
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'e-glowing',
+    'API_KEY': '892893865579588',
+    'API_SECRET': 'JbEUertHLYYkqD6LauD2nmlE9fo',
+}
 
-# DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
