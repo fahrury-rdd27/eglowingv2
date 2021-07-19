@@ -15,7 +15,7 @@ SECRET_KEY = 'django-insecure-ai&z+*-5ova-znw0u=^16jwo0v)40$!na*plmn+_p)#jx+%#oj
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*', '127.0.0.1', 'localhost', 'eglowingv2.herokuapp.com', 'www.eglowingv2.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'eglowingv2.herokuapp.com', 'www.eglowingv2.herokuapp.com']
 
 # rest framework authentication classes
 REST_FRAMEWORK = {
@@ -158,3 +158,10 @@ CLOUDINARY_STORAGE = {
 }
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+# Force HTTPS
+SECURE_SSL_REDIRECT = False
+
+# # Only send cookies over HTTPS
+SESSION_COOKIE_SECURE = False
+CSRF_COOKIE_SECURE = False
